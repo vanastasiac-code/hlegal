@@ -1,5 +1,9 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { defineConfig } from 'vite';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const _dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(() => {
     return {
@@ -25,5 +29,13 @@ export default defineConfig(() => {
                 },
             }),
         ],
+        build: {
+            rollupOptions: {
+                input: {
+                    main: 'index.html',
+                    login: 'register.html',
+                },
+            },
+        },
     };
 });
