@@ -1,0 +1,18 @@
+body {
+  background-color: $basis-white;
+  font: #{$base-fz}/#{$base-lh} #{$base-ff};
+  transition: background .2s ease, color .2s ease;
+}
+
+//.wrapper {
+//  min-height: 100vh;
+//  min-width: 375px;
+//  position: relative;
+//  overflow: hidden;
+//}
+
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
