@@ -1,7 +1,8 @@
-@import "base/fonts";
-@import "base/reset";
-@import "base/vars";
-@import "base/global";
-@import "base/typography";
-@import "icons";
-@import "layout/header";
+@use "base/fonts";
+@use "base/reset";
+@use "base/vars";
+@use "base/global";
+@use "base/typography";
+@use "icons";
+@use "layout/header";
+@use "layout/main";

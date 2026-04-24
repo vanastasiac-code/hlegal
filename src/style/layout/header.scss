@@ -1,0 +1,87 @@
+@use "../base/_vars.scss" as *;
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $basis-white;
+  padding: 0 60px;
+
+  &__top-line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    position: relative;
+
+    &-item:not(:first-child):before{
+      content: "\2022";
+      color: $color-separator;
+      font-size: 30px;
+      line-height: 0.9;
+      position: absolute;
+      top: 0;
+      left: -13px;
+      //display: none;
+
+      //@media screen and (min-width: 768px){
+      //  display: block;
+      //}
+    }
+  }
+
+  &__lang{
+    display: flex;
+    gap: 10px;
+  }
+
+  &__address{
+    display: none;
+
+    @media screen and (min-width: 768px){
+      display: block;
+    }
+  }
+
+  &__tell-link{
+    color: $basis-white;
+  }
+
+  &__facebook-icon{
+    display: none;
+    fill: $basis-white;
+    margin-top: 1px;
+
+    @media screen and (min-width: 768px){
+      display: block;
+    }
+  }
+
+  &__logo{
+    width: 130px;
+    height: 46px;
+  }
+}
+.header__nav{
+  display: none;
+
+  &-list{
+    display: flex;
+    gap: 10px;
+  }
+
+  &-item-link{
+    color: $basis-white;
+  }
+  @media screen and (min-width: 768px){
+    display: block;
+  }
+}
+.mobile-hidden{
+  display: none;
+
+  @media screen and (min-width: 768px){
+    display: block;
+  }
+}

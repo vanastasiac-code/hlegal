@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 body {
   background-color: $basis-white;
   font: #{$base-fz}/#{$base-lh} #{$base-ff};

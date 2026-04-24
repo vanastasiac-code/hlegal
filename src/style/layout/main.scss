@@ -1,0 +1,7 @@
+@use "../base/_vars.scss" as *;
+
+.intro{
+  background: $gradient-supersoft;
+  height: 100vh;
+  padding-top: 160px;
+}
