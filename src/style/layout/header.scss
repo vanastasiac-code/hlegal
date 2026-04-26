@@ -6,14 +6,24 @@
   left: 0;
   right: 0;
   color: $basis-white;
-  padding: 0 60px;
+
+  @media screen and (min-width: 768px){
+    padding: 0 60px;
+  }
 
   &__top-line{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
+    background: rgba(245, 245, 250, 0.2);
     position: relative;
+    padding: 13px 15px;
+    font-weight: 700;
+
+    @media screen and (min-width: 768px){
+      background: none;
+    }
+
 
     &-item:not(:first-child):before{
       content: "\2022";
@@ -23,21 +33,32 @@
       position: absolute;
       top: 0;
       left: -13px;
-      //display: none;
+      display: none;
 
-      //@media screen and (min-width: 768px){
-      //  display: block;
-      //}
+      @media screen and (min-width: 768px){
+        display: block;
+      }
     }
   }
 
   &__lang{
     display: flex;
-    gap: 10px;
+    gap: 6px;
+    align-items: center;
+
+    &-item--active{
+      background-color: $accent-color;
+      border-radius: 8px;
+      padding: 5px 7px;
+    }
+    &-link{
+      color: $basis-white;
+    }
   }
 
-  &__address{
+  &__address-link{
     display: none;
+    color: $basis-white;
 
     @media screen and (min-width: 768px){
       display: block;
@@ -59,23 +80,114 @@
   }
 
   &__logo{
-    width: 130px;
-    height: 46px;
+    display: block;
+    width: 90px;
+    height: auto;
+    margin-top: 15px;
+
+    @media screen and (min-width: 768px){
+      margin-top: 30px;
+      width: 130px;
+    }
   }
 }
 .header__nav{
-  display: none;
+  transform: translateY(120%);
+  transition: transform .2s linear;
+  background: $basis-white;
+  border-radius: 8px 8px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  text-align: center;
+  padding-top: 64px;
+
+  @media screen and (min-width: 768px){
+    position: static;
+    background: none;
+    text-align: left;
+    padding: 0;
+  }
 
   &-list{
-    display: flex;
-    gap: 10px;
+    padding: 0 12px;
+    @media screen and (min-width: 768px){
+      display: flex;
+      padding: 0;
+    }
+  }
+  &-item{
+    margin-bottom: 15px;
+    background: $color-bg;
+    padding: 7px;
+    border-radius: 12px;
+    &:hover{
+      background: $color-separator;
+    }
+    @media screen and (min-width: 768px){
+      background: none;
+      &:hover{
+        background: none;
+      }
+    }
+
+    &-link{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1;
+      padding: 7px 100px;
+
+      @media screen and (min-width: 768px){
+        padding: 0;
+        font-size: $base-fz;
+      }
+    }
   }
 
-  &-item-link{
-    color: $basis-white;
-  }
-  @media screen and (min-width: 768px){
+
+  &-burger{
     display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+
+    @media screen and (min-width: 768px){
+      display: none;
+    }
+
+    & i{
+      position: absolute;
+      height: 2px;
+      background: $basis-white;
+      width: 18px;
+      left: 31px;
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+    & i:nth-child(1){
+      top: 16px;
+    }
+    & i:nth-child(2){
+      top: 22px;
+    }
+    & i:nth-child(3){
+      top: 28px;
+    }
+    &--close{
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      fill: rgba(236, 111, 93, 1);
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      @media screen and (min-width: 768px){
+        display: none;
+      }
+    }
   }
 }
 .mobile-hidden{
@@ -84,4 +196,8 @@
   @media screen and (min-width: 768px){
     display: block;
   }
+}
+.header.active .header__nav{
+  transform: translateY(0%);
+  transition: transform .2s linear;
 }

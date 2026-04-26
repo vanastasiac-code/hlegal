@@ -7,57 +7,65 @@
     <title>hlegal</title>
   </head>
   <body>
-    <div class="container">
-        <header class="header">
-            <ul class="header__top-line">
-                <li class="header__top-line-item">
-                    <ul class="header__lang">
-                        <li class="header__lang-item">Укр</li>
-                        <li class="header__lang-item">Рус</li>
-                        <li class="header__lang-item">En</li>
-                    </ul>
-                </li>
-                <li class="header__top-line-item mobile-hidden">
-                    <address class="header__address">Kyiv, Mechnikova str., 14/1</address>
-                </li>
-                <li class="header__top-line-item">
-                    <a class="header__tell-link" href="tel:0800211927" target="_blank">0800 211 927</a>
-                </li>
-                <li class="header__top-line-item mobile-hidden">
-                    <svg class="header__facebook-icon" viewBox="0 0 24 24" width="24" height="24">
-                        <use href="src/icons/sprite.svg#icon-facebook"></use>
-                    </svg>
-                </li>
-            </ul>
-            <strong class="header__logo">
-                <svg viewBox="0 0 130 46" width="130" height="46">
-                    <use xlink:href="src/icons/sprite.svg#icon-Logo" x="0" y="0"></use>
-                </svg>
-            </strong>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"><a class="header__nav-item-link" href="#">about us</a></li>
-                    <li class="header__nav-item"><a class="header__nav-item-link" href="#">services</a></li>
-                    <li class="header__nav-item"><a class="header__nav-item-link" href="#">team</a></li>
-                    <li class="header__nav-item"><a class="header__nav-item-link" href="#">publications</a></li>
-                    <li class="header__nav-item"><a class="header__nav-item-link" href="#">contact</a></li>
-                </ul>
-            </nav>
-<!--            <span class="header__nav-burger">-->
-<!--                <i></i>-->
-<!--                <i></i>-->
-<!--                <i></i>-->
-<!--            </span>-->
-        </header>
-    </div>
-        <main>
-            <section class="intro">
-<!--                <p class="intro__text">-->
-<!--                    you legal solutions provider-->
-<!--                </p>-->
-            </section>
-        </main>
-        <footer></footer>
+      <div class="wrapper">
+          <header class="header">
+              <ul class="header__top-line">
+                  <li class="header__top-line-item">
+                      <ul class="header__lang">
+                          <li class="header__lang-item"><a href="#" class="header__lang-link">Укр</a></li>
+                          <li class="header__lang-item"><a href="#" class="header__lang-link">Рус</a></li>
+                          <li class="header__lang-item header__lang-item--active"><a href="#" class="header__lang-link">En</a></li>
+                      </ul>
+                  </li>
+                  <li class="header__top-line-item mobile-hidden">
+                      <address class="header__address"><a class="header__address-link" href="#" target="_blank">Kyiv, Mechnikova str., 14/1</a></address>
+                  </li>
+                  <li class="header__top-line-item">
+                      <a class="header__tell-link" href="tel:0800211927" target="_blank">0800 211 927</a>
+                  </li>
+                  <li class="header__top-line-item mobile-hidden">
+                      <svg class="header__facebook-icon" viewBox="0 0 24 24" width="24" height="24">
+                          <use href="src/icons/sprite.svg#icon-facebook"></use>
+                      </svg>
+                  </li>
+              </ul>
+              <div class="container">
+                  <strong class="header__logo">
+                      <svg viewBox="0 0 150 60">
+                          <use xlink:href="src/icons/sprite.svg#icon-Logo" x="0" y="0"></use>
+                      </svg>
+                  </strong>
+                  <nav class="header__nav">
+                      <span class="header__nav-burger--close js-nav-close">
+                          <svg viewBox="0 0 20 20">
+                              <use xlink:href="src/icons/sprite.svg#icon-close"></use>
+                          </svg>
+                      </span>
+                      <ul class="header__nav-list">
+                          <li class="header__nav-item"><a class="header__nav-item-link" href="#">about us</a></li>
+                          <li class="header__nav-item"><a class="header__nav-item-link" href="#">services</a></li>
+                          <li class="header__nav-item"><a class="header__nav-item-link" href="#">team</a></li>
+                          <li class="header__nav-item"><a class="header__nav-item-link" href="#">publications</a></li>
+                          <li class="header__nav-item"><a class="header__nav-item-link" href="#">contact</a></li>
+                      </ul>
+                  </nav>
+                  <span class="header__nav-burger js-nav-open">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                  </span>
+              </div>
+          </header>
+          <main>
+              <section class="intro">
+                  <!--                <p class="intro__text">-->
+                  <!--                    you legal solutions provider-->
+                  <!--                </p>-->
+              </section>
+          </main>
+          <footer></footer>
+      </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
