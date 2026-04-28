@@ -1,7 +1,65 @@
 @use "../base/_vars.scss" as *;
 
-.intro{
+.gradient-bg{
   background: $gradient-supersoft;
   height: 100vh;
-  padding-top: 160px;
+}
+.intro{
+  background: url("../../images/bg-h.png") no-repeat 50% 50% ;
+  background-size: auto 100%;
+  min-height: 67vh;
+  position: relative;
+  padding: 102px 30px;
+
+  @media screen and (min-width: 768px){
+    min-height: 114vh;
+  }
+  @media screen and (min-width: 1024px){
+    min-height: 85vh;
+  }
+  @media screen and (min-width: 1440px){
+    min-height: 67vh;
+  }
+  @media screen and (min-width: 1920px){
+    min-height: 61vh;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text{
+    color: $basis-white;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  &__link{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 33px;
+    left: 45%;
+    width: 42px;
+    height: 42px;
+
+  &:after{
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid $basis-white;
+    border-right: 2px solid $basis-white;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 28%;
+    left: 32%;
+  }
+    //@media screen and (min-width: 768px){
+    //  bottom: 33%;
+    //  left: 45%;
+    //}
+  }
 }
