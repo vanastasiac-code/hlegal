@@ -1,0 +1,106 @@
+@use "../base/_vars.scss" as *;
+
+.tabs{
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  &:after{
+    @media screen and (min-width: 1440px) {
+      content: "";
+      border-left: 4px solid rgba(255, 255, 255, 0.3);
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 46%;
+    }
+  }
+
+  &__container{
+    padding: 0 30px;
+  }
+
+  &__title{
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    margin: 0 -30px;
+    padding: 30px;
+    @media screen and (min-width: 768px) {
+      overflow: auto;
+    }
+    @media screen and (min-width: 1024px) {
+      display: inline-block;
+      flex-basis: 46%;
+      overflow: hidden;
+      text-align: right;
+      margin: 0;
+      padding: 15px 30px;
+    }
+
+    &-item{
+      font-size: 30px;
+      font-weight: 700;
+      color: $color-text;
+      flex-shrink: 0;
+      cursor: pointer;
+      &:hover{
+        color: $accent-color;
+      }
+      @media screen and (min-width: 1024px) {
+        font-size: 38px;
+        margin-bottom: 30px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+    padding-top: 30px;
+    position: relative;
+    @media screen and (min-width: 1024px) {
+      flex-basis: 53%;
+      padding: 10px 30px;
+      border-top: none;
+      border-left: 4px solid rgba(255, 255, 255, 0.3);
+    }
+    @media screen and (min-width: 1440px) {
+      border-left: none;
+    }
+
+    &-item {
+      display: none;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: $basis-white;
+      margin-bottom: 30px;
+      @media screen and (min-width: 1024px) {
+        font-size: 30px;
+      }
+    }
+
+    &-text {
+      font-size: 19px;
+      line-height: 1.6;
+      color: $basis-white;
+    }
+  }
+}
+.tabs__content-item.show{
+  display: block;
+}
+.tabs-active{
+  background: $gradient-text-reversed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+}
