@@ -6,16 +6,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 57px;
   }
   &:after{
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1024px) {
       content: "";
       border-left: 4px solid rgba(255, 255, 255, 0.3);
       position: absolute;
-      top: 8px;
-      bottom: 8px;
-      left: 46%;
+      top: 7px;
+      bottom: 6px;
+      left: 48%;
+    }
+    @media screen and (min-width: 1440px){
+      top: 1px;
+      bottom: 13px;
+      left: 615px;
+    }
+    @media screen and (min-width: 1920px) {
+      top: 6px;
+      bottom: 2px;
+      left: 715px;
     }
   }
 
@@ -28,9 +38,10 @@
     gap: 30px;
     overflow-x: auto;
     margin: 0 -30px;
-    padding: 30px;
+    padding: 23px 30px;
     @media screen and (min-width: 768px) {
       overflow: auto;
+      padding: 54px 60px;
     }
     @media screen and (min-width: 1024px) {
       display: inline-block;
@@ -38,7 +49,15 @@
       overflow: hidden;
       text-align: right;
       margin: 0;
-      padding: 15px 30px;
+      padding: 15px 44px 15px 19px;
+    }
+    @media screen and (min-width: 1440px){
+      flex-basis: 35%;
+      padding: 7px 41px 15px 19px;
+    }
+    @media screen and (min-width: 1920px){
+      flex-basis: 25%;
+      padding: 14px 45px 15px 19px;
     }
 
     &-item{
@@ -49,29 +68,42 @@
       cursor: pointer;
       &:hover{
         color: $accent-color;
+        transition: color 0.3s linear;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 38px;
       }
       @media screen and (min-width: 1024px) {
-        font-size: 38px;
-        margin-bottom: 30px;
+        margin-bottom: 14px;
       }
       &:last-child{
         margin-bottom: 0;
+      }
+      @media screen and (min-width: 1440px) {
+        margin-bottom: 15px;
       }
     }
   }
 
   &__content {
     border-top: 4px solid rgba(255, 255, 255, 0.3);
-    padding-top: 30px;
+    padding-top: 28px;
     position: relative;
+    @media screen and (min-width: 768px) {
+      padding-top: 55px;
+      margin: 0 30px;
+    }
     @media screen and (min-width: 1024px) {
       flex-basis: 53%;
-      padding: 10px 30px;
+      padding: 15px 30px 15px 80px;
       border-top: none;
-      border-left: 4px solid rgba(255, 255, 255, 0.3);
+      margin: 0;
     }
-    @media screen and (min-width: 1440px) {
-      border-left: none;
+    @media screen and (min-width: 1440px){
+      padding: 26px 67px 34px 84px;
+    }
+    @media screen and (min-width: 1920px){
+      padding: 34px 53px 34px 80px;
     }
 
     &-item {
@@ -80,18 +112,26 @@
 
     &-title {
       font-size: 20px;
+      line-height: 1.3;
       font-weight: 700;
       color: $basis-white;
       margin-bottom: 30px;
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 768px) {
         font-size: 30px;
+      }
+      @media screen and (min-width: 1024px){
+        line-height: 1.2;
+        margin-bottom: 32px;
       }
     }
 
     &-text {
       font-size: 19px;
-      line-height: 1.6;
+      line-height: 1.55;
       color: $basis-white;
+      @media screen and (min-width: 1024px){
+        line-height: 1.6;
+      }
     }
   }
 }

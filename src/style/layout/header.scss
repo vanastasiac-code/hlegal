@@ -76,17 +76,28 @@
     gap: 2px;
     align-items: center;
 
-    &-item--active{
+    &-link--active{
       background-color: $accent-color;
       border-radius: 8px;
-
       vertical-align: middle;
+      color: $basis-white;
+      font-size: 12px;
+      padding: 5px 7px;
+      pointer-events: none;
+      &:hover{
+        background-color: transparent;
+      }
     }
     &-link{
       color: $basis-white;
       font-size: 12px;
       vertical-align: middle;
       padding: 5px 7px;
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        transition: background-color 0.3s linear;
+      }
     }
   }
 
@@ -107,6 +118,10 @@
   &__facebook-icon{
     display: none;
     fill: $basis-white;
+    &:hover{
+      fill: $accent-color;
+      transition: fill 0.2s linear;
+    }
 
     @media screen and (min-width: 768px){
       display: block;
@@ -177,6 +192,7 @@
     border-radius: 12px;
     &:hover{
       background: $color-separator;
+      transition: background 0.3s linear;
     }
     @media screen and (min-width: 768px){
       background: none;
@@ -184,6 +200,8 @@
       margin-bottom: 0;
       &:hover{
         background: none;
+        text-decoration: underline;
+        transition: text-decoration 0.3s linear;
       }
     }
 
@@ -194,9 +212,10 @@
       padding: 7px 100px;
 
       @media screen and (min-width: 768px){
-        padding: 0;
+        padding: 3px 0;
         font-size: $base-fz;
         color: $basis-white;
+
       }
     }
   }

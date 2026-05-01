@@ -2,7 +2,7 @@
 
 .gradient-bg{
   background: $gradient-supersoft;
-  //height: 100vh;
+  padding-bottom: 60px;
 }
 .intro{
   background: url("../../images/bg-h.png") no-repeat 50% 50% ;
@@ -41,9 +41,17 @@
     border-radius: 50%;
     position: absolute;
     bottom: 33px;
-    left: 45%;
+    left: 47%;
     width: 42px;
     height: 42px;
+    &:hover{
+      border-color: $accent-color;
+      transition: border-color 0.2s linear;
+    }
+    &:hover:after{
+      border-color: $accent-color;
+      transition: border-color 0.2s linear;
+    }
 
   &:after{
     content: "";
@@ -57,9 +65,17 @@
     top: 28%;
     left: 32%;
   }
-    //@media screen and (min-width: 768px){
-    //  bottom: 33%;
-    //  left: 45%;
-    //}
+    @media screen and (min-width: 1024px){
+      bottom: 27px;
+      left: 48%;
+    }
+    @media screen and (min-width: 1440px){
+      bottom: 33px;
+      left: 699px;
+    }
+    @media screen and (min-width: 1920px) {
+      bottom: 28px;
+      left: 48.6%;
+    }
   }
 }
