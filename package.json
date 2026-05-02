@@ -17,5 +17,10 @@
     "vite": "^8.0.4",
     "vite-plugin-image-optimizer": "^2.0.3"
   },
-  "browserslist": ["cover 99.5%"]
+  "browserslist": [
+    "cover 99.5%"
+  ],
+  "dependencies": {
+    "swiper": "^12.1.4"
+  }
 }

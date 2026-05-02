@@ -1,8 +1,13 @@
 @use "../base/_vars.scss" as *;
 
 .services{
-  margin-top: 60px;
-
+  margin-top: 36px;
+  @media screen and (min-width: 768px){
+    margin-top: 63px;
+  }
+  @media screen and (min-width: 1024px){
+    margin-top: 54px;
+  }
 
   &__container{
     padding: 0 30px;
@@ -11,33 +16,12 @@
     }
   }
 
-  &__category{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    position: relative;
-    padding-right: 12px;
-
-    &::after{
-    content: "";
-      display: block;
-      width: 5px;
-      height: 5px;
-      border-top: 2px solid $active-r-color;
-      border-right: 2px solid $active-r-color;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 5px;
-      left: 75px;
-    }
-  }
-
   &__title{
     font-weight: 700;
     background: $gradient-text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 1.2;
     @media screen and (min-width: 768px){
       font-size: 38px;
     }
@@ -47,8 +31,11 @@
     @media screen and (min-width: 768px){
       display: flex;
       flex-wrap: wrap;
-      gap: 60px;
-      margin-top: 60px;
+      gap: 0 60px;
+      margin-top: 29px;
+    }
+    @media screen and (min-width: 1440px){
+      gap: 0 65px;
     }
   }
 
@@ -64,6 +51,7 @@
 
     &-title{
       font-weight: 700;
+      line-height: 1.3;
       color: $active-r-color;
       margin-bottom: 15px;
     }
@@ -90,5 +78,26 @@
   }
   &-six{
     background: url("../../svg/icon-6.svg") no-repeat;
+  }
+}
+.title__category{
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 12px;
+
+  &::after{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid $active-r-color;
+    border-right: 2px solid $active-r-color;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    left: 95%;
   }
 }
