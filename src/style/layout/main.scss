@@ -3,6 +3,28 @@
 .gradient-bg{
   background: $gradient-supersoft;
   padding-bottom: 60px;
+  position: relative;
+  border-radius: 0 0 12px 12px;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+    background: #CACADB ;
+    border-radius: 0 0 12px 12px;
+  }
+  &::after{
+    background: #E7E7F2;
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
+  }
+
+
 }
 .intro{
   background: url("../../images/bg-h.png") no-repeat 50% 50% ;
@@ -41,9 +63,10 @@
     border-radius: 50%;
     position: absolute;
     bottom: 33px;
-    left: 47%;
+    left: 50%;
     width: 42px;
     height: 42px;
+    transform: translateX(-50%);
     &:hover{
       border-color: $accent-color;
       transition: border-color 0.2s linear;
@@ -65,17 +88,5 @@
     top: 28%;
     left: 32%;
   }
-    @media screen and (min-width: 1024px){
-      bottom: 27px;
-      left: 48%;
-    }
-    @media screen and (min-width: 1440px){
-      bottom: 33px;
-      left: 699px;
-    }
-    @media screen and (min-width: 1920px) {
-      bottom: 28px;
-      left: 48.6%;
-    }
   }
 }
