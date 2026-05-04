@@ -1,0 +1,53 @@
+@use "../base/_vars.scss" as *;
+
+.trust{
+  margin-top: 60px;
+
+  &__title{
+    color: $main-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__list{
+    height: 720px;
+    overflow-y: scroll;
+    @media screen and (min-width: 768px){
+      height: auto;
+      overflow-y: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1920px){
+      border-radius: 12px;
+      margin: 0 100px;
+    }
+  }
+
+  &__item{
+    width: 100%;
+    @media screen and (min-width: 768px){
+      width: 33.33%;
+    }
+    @media screen and (min-width: 1024px){
+      width: 25%;
+    }
+
+    &-link{
+      padding: 10px;
+      display: block;
+      height: 120px;
+      text-align: center;
+    }
+
+    &-img{
+      max-height: 100%;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+}
