@@ -37,6 +37,6 @@ export default defineConfig(() => {
                 },
             },
         },
-        base: '/hlegal/',
+        base: './hlegal/',
     };
 });
