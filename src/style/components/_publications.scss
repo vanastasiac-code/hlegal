@@ -4,12 +4,16 @@
   background-color: $color-bg;
 
   &__container{
-    padding: 30px;
+    padding: 32px;
+    @media screen and (min-width: 768px){
+      padding: 32px 60px;
+    }
   }
 
   &__title{
-    font-size: 31px;
-    margin-bottom: 30px;
+    margin-top: -5px;
+    font-size: 30px;
+    margin-bottom: 32px;
     @media screen and (min-width: 768px){
       font-size: 38px;
     }
@@ -32,10 +36,13 @@
 
     &-item{
       background-color: $basis-white;
-      margin-bottom: 30px;
-      border-radius: 8px;
+      margin-bottom: 28px;
+      border-radius: 0 0 8px 8px;
       @media screen and (min-width: 1024px){
         flex-basis: calc((100% - 60px)/3);
+      }
+      &:last-child{
+        margin-bottom: 0;
       }
     }
   }
@@ -44,6 +51,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 8px 8px 0 0;
   }
 
   &__description{
@@ -51,13 +59,14 @@
   }
 
   &__link-title{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
+    line-height: 1.4;
   }
 
   &__date{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 1;
     color: $color-text;
@@ -67,7 +76,7 @@
 
   &__text{
     font-size: 14px;
-    padding-top: 15px;
+    padding-top: 20px;
     border-top: 4px solid $color-separator;
   }
 }
