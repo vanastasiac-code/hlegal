@@ -7,7 +7,7 @@ const _dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(() => {
     return {
-        base: './',
+        base: './hlegal',
         plugins: [
             ViteImageOptimizer({
                 svg: {
