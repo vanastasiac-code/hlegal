@@ -201,8 +201,6 @@
       margin-bottom: 0;
       &:hover{
         background: none;
-        text-decoration: underline;
-        transition: text-decoration 0.3s linear;
       }
     }
 
@@ -211,12 +209,27 @@
       font-size: 24px;
       line-height: 1;
       padding: 7px 100px;
+      &:hover{
+        border-bottom: 2px solid $basis-white;
+        padding-bottom: 7px;
+        transition: border-bottom 0.3s linear;
+      }
 
       @media screen and (min-width: 768px){
         padding: 3px 0;
         font-size: $base-fz;
         color: $basis-white;
-
+      }
+      &--active{
+        color: $accent-color;
+        pointer-events: none;
+        &:hover{
+          border-bottom: none;
+        }
+        @media screen and (min-width: 768px){
+          border-bottom: 2px solid $accent-color;
+          padding-bottom: 7px;
+        }
       }
     }
   }

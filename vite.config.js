@@ -34,7 +34,7 @@ export default defineConfig(() => {
             rollupOptions: {
                 input: {
                     main: 'index.html',
-                    login: 'register.html',
+                    login: 'service.html',
                 },
             },
         },

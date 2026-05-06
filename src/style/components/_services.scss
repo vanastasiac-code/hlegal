@@ -51,12 +51,14 @@
 
     &-title{
       font-weight: 700;
+      font-size: 22px;
       line-height: 1.3;
       color: $active-r-color;
       margin-bottom: 15px;
-    }
-    &-text{
-      color: $basis-white;
+      display: inline-block;
+      &:hover{
+        color: $accent-color;
+      }
     }
   }
 }
