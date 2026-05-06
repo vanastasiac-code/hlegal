@@ -86,6 +86,7 @@
       pointer-events: none;
       &:hover{
         background-color: transparent;
+        transition: background-color 0.3s linear;
       }
     }
     &-link{
@@ -120,7 +121,7 @@
     fill: $basis-white;
     &:hover{
       fill: $accent-color;
-      transition: fill 0.2s linear;
+      transition: fill 0.3s linear;
     }
 
     @media screen and (min-width: 768px){

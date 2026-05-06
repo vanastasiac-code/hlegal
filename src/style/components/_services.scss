@@ -100,4 +100,12 @@
     top: 5px;
     left: 95%;
   }
+  &:hover{
+    color: $accent-color;
+    transition: color 0.3s linear;
+  }
+  &:hover::after{
+    border-color: $accent-color;
+    transition: border-color 0.3s linear;
+  }
 }

@@ -38,6 +38,10 @@
       background-color: $basis-white;
       margin-bottom: 28px;
       border-radius: 0 0 8px 8px;
+      transition: transform 0.3s linear;
+      &:hover{
+        transform: scale(1.01);
+      }
       @media screen and (min-width: 1024px){
         flex-basis: calc((100% - 60px)/3);
       }
@@ -63,6 +67,10 @@
     font-weight: 700;
     margin-bottom: 13px;
     line-height: 1.4;
+    &:hover{
+      color: $accent-color;
+      transition: color 0.3s linear;
+    }
   }
 
   &__date{

@@ -69,11 +69,11 @@
     transform: translateX(-50%);
     &:hover{
       border-color: $accent-color;
-      transition: border-color 0.2s linear;
+      transition: border-color 0.3s linear;
     }
     &:hover:after{
       border-color: $accent-color;
-      transition: border-color 0.2s linear;
+      transition: border-color 0.3s linear;
     }
 
   &:after{
