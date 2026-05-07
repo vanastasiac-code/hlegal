@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="./assets/bg-h-BJtZixNl.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hlegal</title>
-  <script type="module" crossorigin src="./assets/main-BJB2TBaj.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-DjfQrUG2.css">
+  <script type="module" crossorigin src="./assets/main-CIG8i5Vn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-XUeZS-Ry.css">
 </head>
 <body>
     <div class="wrapper">
@@ -32,7 +32,7 @@
                 </li>
             </ul>
             <div class="container header__container">
-                <a href="index.html" class="header__logo header__logo-services">
+                <a href="services.html" class="header__logo header__logo-services">
                     <svg viewBox="0 0 150 60">
                         <use xlink:href="./assets/sprite-wQfeaa4V.svg#icon-logo-services" x="0" y="0"></use>
                     </svg>
@@ -69,7 +69,7 @@
                         <p class="service__text">
                             In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.
                         </p>
-                        <button class="service__btn">Free consultation</button>
+                        <button type="button" class="service__btn " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Free consultation</button>
                     </div>
                     <div class="service__lists">
                         <h3 class="service__lists-title">Services in this area:</h3>
@@ -159,6 +159,44 @@
                 <p class="footer__copyright">© 2021 HLEGAL Law company, LLC</p>
             </div>
         </footer>
-    </div>
+    </div>
+    <section class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal__window">
+            <div class="modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <h1 class="modal-title fs-5 modal__title services__title" id="exampleModalLabel">We would like to help you</h1>
+                    <button type="button" class="btn-close modal__btn--close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg viewBox="0 0 20 20" width="22" height="22">
+                            <use xlink:href="./assets/sprite-wQfeaa4V.svg#icon-close" x="0" y="0"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body modal__body">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control modal__input" id="recipient-name" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control modal__textarea" id="message-text" placeholder="Message"></textarea>
+                        </div>
+                    </form>
+                    <form class="modal__form">
+                        <div class="mb-3">
+                            <h2 class="modal__form-title">How to answer you?</h2>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control modal__input" id="phone-number" placeholder="Phone number">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control modal__input" id="email" placeholder="Email">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal__footer">
+                    <button type="button" class="btn modal__btn">Send message</button>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
