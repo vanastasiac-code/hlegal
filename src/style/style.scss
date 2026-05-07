@@ -1,3 +1,4 @@
+@use "bootstrap/scss/bootstrap";
 @use "base/fonts";
 @use "base/reset";
 @use "base/vars";
@@ -14,3 +15,4 @@
 @use "components/_trust";
 @use "components/publications";
 @use "layout/_footer";
+@use "layout/_popup";
