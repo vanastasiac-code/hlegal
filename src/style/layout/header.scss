@@ -191,7 +191,7 @@
     background: $color-bg;
     padding: 7px;
     border-radius: 12px;
-    &:hover{
+    &:hover:not(.header__nav-item--active){
       background: $color-separator;
       transition: background 0.3s linear;
     }
@@ -199,7 +199,7 @@
       background: none;
       padding: 0;
       margin-bottom: 0;
-      &:hover{
+      &:hover:not(.header__nav-item--active){
         background: none;
       }
     }
@@ -208,17 +208,16 @@
       font-weight: 700;
       font-size: 24px;
       line-height: 1;
-      padding: 7px 100px;
-      &:hover{
-        border-bottom: 2px solid $basis-white;
-        padding-bottom: 7px;
-        transition: border-bottom 0.3s linear;
-      }
-
+      padding: 7px 83px;
       @media screen and (min-width: 768px){
         padding: 3px 0;
         font-size: $base-fz;
         color: $basis-white;
+        &:hover{
+          border-bottom: 2px solid $basis-white;
+          padding-bottom: 7px;
+          transition: border-bottom 0.3s linear;
+        }
       }
       &--active{
         color: $accent-color;
@@ -237,12 +236,16 @@
 
   &-burger{
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    top: 50px;
+    top: 61px;
     right: 21px;
-
+    &:hover{
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      transition: background 0.3s linear;
+    }
     @media screen and (min-width: 768px){
       display: none;
     }
@@ -252,18 +255,18 @@
       height: 2px;
       background: $basis-white;
       width: 18px;
-      left: 31px;
+      left: 7px;
       transition: all 0.3s;
       z-index: 1000;
     }
     & i:nth-child(1){
-      top: 16px;
+      top: 10px;
     }
     & i:nth-child(2){
-      top: 22px;
+      top: 16px;
     }
     & i:nth-child(3){
-      top: 28px;
+      top: 22px;
     }
     &--close{
       display: inline-block;
@@ -290,3 +293,7 @@
   transform: translateY(0%);
   transition: transform .2s linear;
 }
+
+//.header__nav-item-link--active .header__nav-item:hover{
+//  background: none;
+//}

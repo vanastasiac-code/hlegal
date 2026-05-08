@@ -4,9 +4,11 @@
   &__logo-services {
     width: 168px;
     margin-top: -16px;
+    margin-left: 0;
 
     &:hover{
       transform: scale(1.01);
+      transition: transform 0.3s linear;
     }
 
     @media screen and (min-width: 768px) {
@@ -24,7 +26,7 @@
   }
 
   &__top-line-services{
-    margin-bottom: 11px;
+    margin-bottom: 13px;
   }
 
   &__nav-services{

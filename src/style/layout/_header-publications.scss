@@ -1,0 +1,86 @@
+@use "../base/_vars.scss" as *;
+
+.header{
+   &--lights {
+     color: $color-text;
+     position: relative;
+   }
+
+  &__top-line--lights{
+    background: $color-bg;
+    @media screen and (min-width: 768px){
+      background: none;
+      margin-bottom: 13px;
+    }
+  }
+
+  &-link--lights{
+    color: $color-text;
+  }
+
+  &__lang-link--lights{
+    &:hover{
+      background-color: $color-bg;
+      border-radius: 8px;
+      transition: background-color 0.3s linear;
+    }
+  }
+
+  &__facebook-icon--lights{
+    fill: $color-text;
+  }
+
+  &__logo-publications{
+    width: 212px;
+    margin-top: -20px;
+    margin-left: 0;
+
+    &:hover{
+      transform: scale(1.01);
+      transition: transform 0.3s linear;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 382px;
+      margin-left: -4px;
+    }
+    @media screen and (min-width: 1024px) {
+      position: absolute;
+      top: -18px;
+      left: 60px;
+    }
+    @media screen and (min-width: 1920px) {
+      left: 159px;
+    }
+  }
+
+  &__nav-item-link--lights{
+    color: $active-r-color;
+    @media screen and (min-width: 768px){
+      &:hover{
+        border-bottom: 2px solid $active-r-color;
+        padding-bottom: 7px;
+        transition: border-bottom 0.3s linear;
+      }
+    }
+  }
+
+  &__nav--lights{
+    box-shadow: 0 0 20px 0 $color-text;
+    @media screen and (min-width: 768px){
+      box-shadow: none;
+    }
+  }
+
+  &__nav-burger--lights{
+    &:hover{
+      background: $color-separator;
+      border-radius: 8px;
+      transition: background 0.3s linear;
+    }
+
+    & i{
+      background: $main-color;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@use "../base/_vars.scss" as *;
+
+.publications{
+
+  &__container-page{
+    margin-top: -15px;
+    padding: 32px;
+    color: $main-color;
+    @media screen and (min-width: 768px){
+      margin-top: 60px;
+      padding: 32px 60px;
+    }
+    @media screen and (min-width: 1920px){
+      padding: 32px 160px;
+    }
+  }
+
+  &__tabs{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: $color-separator;
+    border-radius: 12px;
+    width: 233px;
+    margin-bottom: 30px;
+    padding: 2px;
+    color: $main-color;
+    font-weight: 700;
+    line-height: 1;
+
+
+    &-item{
+      padding: 10px 30px;
+      &:hover{
+        cursor: pointer;
+        background: $color-bg;
+        border-radius: 10px;
+        transition: background 0.3s linear;
+      }
+      &-active{
+        background: $basis-white;
+        border-radius: 10px;
+        transition: background 0.3s linear;
+        &:hover{
+          background: $basis-white;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-wrap{
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+.publication__article-p{
+  display: none;
+}
+.publication__article-p.show{
+  display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+.publication__btn{
+  position: relative;
+  width: auto;
+  margin-top: 20px;
+  &:hover{
+    color: inherit;
+  }
+  @media screen and (max-width: 768px){
+    margin-top: 30px;
+  }
+}
+
+.publication__news {
+  &-item {
+    background-color: $basis-white;
+    margin-bottom: 28px;
+    border-radius: 8px;
+    transition: transform 0.3s linear;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1024px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+}
+.publication__articles{
+  display: none;
+}
+.publication__articles.show{
+  display: block;
+  @media screen and (min-width: 768px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 30px;
+  }
+  @media screen and (min-width: 1024px){
+    display: flex;
+    gap: 30px;
+  }
+}

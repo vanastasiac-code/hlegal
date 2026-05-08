@@ -58,6 +58,7 @@
       display: inline-block;
       &:hover{
         color: $accent-color;
+        transition: color 0.3s linear;
       }
     }
   }

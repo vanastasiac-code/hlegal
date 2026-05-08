@@ -19,6 +19,9 @@
     height: 640px;
     background-color: rgba(245, 245, 250, 1);
     position: relative;
+    @media screen and (min-width: 768px){
+      box-shadow: 0 15px 80px 0 rgba(40, 40, 86, 0.5);
+    }
   }
 
   &__header{
