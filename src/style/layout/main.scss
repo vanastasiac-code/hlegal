@@ -30,22 +30,9 @@
 .intro{
   background: url("../../images/bg-h.png") no-repeat 50% 50% ;
   background-size: auto 100%;
-  min-height: 67vh;
+  min-height: 100vh;
   position: relative;
-  padding: 102px 30px;
-
-  @media screen and (min-width: 768px){
-    min-height: 114vh;
-  }
-  @media screen and (min-width: 1024px){
-    min-height: 85vh;
-  }
-  @media screen and (min-width: 1440px){
-    min-height: 67vh;
-  }
-  @media screen and (min-width: 1920px){
-    min-height: 61vh;
-  }
+  padding: 102px 0;
 
   &__container{
     display: flex;

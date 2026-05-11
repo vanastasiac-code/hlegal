@@ -15,13 +15,6 @@
     margin-top: 60px;
   }
 
-  &__container{
-    padding: 0 30px;
-    @media screen and (min-width: 768px){
-      padding: 0 60px;
-    }
-  }
-
   &__item{
     padding: 120px 0 84px;
     position: relative;
@@ -73,20 +66,21 @@
     margin-bottom: 30px;
   }
 
-  &-wrap{
-    @media screen and (min-width: 768px){
-      display: flex;
-      gap: 60px;
-    }
-  }
 }
 .service__list{
   margin-bottom: 30px;
-  flex: 1 1 calc((100% - 60px)/2);
+  @media screen and (min-width: 768px){
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    align-items: center;
+  }
 
   &-item{
     list-style-image: url("../../svg/disc-list.svg");
     margin-bottom: 15px;
+    order: revert;
   }
 }
 

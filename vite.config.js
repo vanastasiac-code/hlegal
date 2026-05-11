@@ -37,6 +37,7 @@ export default defineConfig(() => {
                     services: 'services.html',
                     service: 'services-entry.html',
                     publications: 'publications.html',
+                    publication: 'publications-entry.html',
                 },
             },
         },

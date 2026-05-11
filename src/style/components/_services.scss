@@ -9,12 +9,6 @@
     margin-top: 54px;
   }
 
-  &__container{
-    padding: 0 30px;
-    @media screen and (min-width: 768px){
-      padding: 0 60px;
-    }
-  }
 
   &__title{
     font-weight: 700;
@@ -100,7 +94,7 @@
     border-right: 2px solid $active-r-color;
     transform: rotate(45deg);
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 95%;
   }
   &:hover{

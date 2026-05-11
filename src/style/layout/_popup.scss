@@ -40,7 +40,7 @@
     opacity: 1;
     position: absolute;
     right: 26px;
-    top: 30px;
+    top: 15px;
     margin: 0 !important;
     padding: 4px !important;
     width: 25px;
@@ -71,6 +71,7 @@
     padding: 15px;
     height: 130px;
     border: none;
+    resize: none;
     &::placeholder{
       color: $color-text;
     }
