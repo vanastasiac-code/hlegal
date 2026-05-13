@@ -32,12 +32,10 @@
   background-size: auto 100%;
   min-height: 100vh;
   position: relative;
-  padding: 102px 0;
 
   &__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
   }
 
   &__text{

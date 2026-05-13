@@ -38,6 +38,7 @@ export default defineConfig(() => {
                     service: 'services-entry.html',
                     publications: 'publications.html',
                     publication: 'publications-entry.html',
+                    contact: 'contact.html',
                 },
             },
         },
