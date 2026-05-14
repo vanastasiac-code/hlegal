@@ -3,7 +3,7 @@
 .header__logo-contact{
   width: 167px;
   margin-top: -13px;
-  margin-left: 0;
+  margin-left: -15px;
 
   &:hover{
     transform: scale(1.01);
@@ -12,6 +12,7 @@
 
   @media screen and (min-width: 768px) {
     width: 297px;
+    margin-left: 0;
   }
   @media screen and (min-width: 1024px) {
     position: absolute;

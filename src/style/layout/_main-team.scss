@@ -1,0 +1,113 @@
+@use "../base/_vars.scss" as *;
+
+.team{
+  &__title{
+    font-size: 30px;
+    margin-top: 30px;
+    @media screen and (min-width: 768px){
+      margin-top: 60px;
+    }
+    @media screen and (min-width: 1024px){
+      padding: 0 120px;
+    }
+    @media screen and (min-width: 1920px){
+      padding: 0 75px;
+    }
+  }
+
+  &__list{
+    margin: 30px 0 60px;
+    @media screen and (min-width: 768px){
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item{
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: $color-text;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 768px){
+      flex-basis: calc((100% - 60px) / 2);
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1024px){
+      flex-basis: calc((100% - 120px) / 3);
+    }
+
+    &-img{
+      height: 300px;
+      width: 100%;
+      @media screen and (min-width: 768px){
+        height: 400px;
+      }
+
+      & > img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+    }
+
+    &-title{
+      margin: 15px 0 5px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    &-description{
+      position: relative;
+    }
+
+    &-link{
+      color: $main-color;
+      padding-right: 10px;
+      &:hover{
+        color: $accent-color;
+        transition: color 0.3s linear;
+      }
+      &:hover:after{
+        border-color: $accent-color;
+        transition: border-color 0.3s linear;
+      }
+      &:hover:before{
+        background: $color-bg-alt;
+        transition: background 0.3s linear;
+      }
+
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $color-bg;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+      }
+
+      &::after{
+        content: "";
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-top: 2px solid $active-r-color;
+        border-right: 2px solid $active-r-color;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 9px;
+        right: 12px;
+      }
+    }
+  }
+}
