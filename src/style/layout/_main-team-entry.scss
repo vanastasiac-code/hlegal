@@ -1,0 +1,35 @@
+@use "../base/_vars.scss" as *;
+
+.team-entry{
+  margin-top: 30px;
+
+  &__img{
+    height: 375px;
+    width: 100%;
+
+    & > img{
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  &__title{
+    margin-top: 30px;
+  }
+
+  &__list{
+    font-size: 14px;
+    color: $color-text;
+    margin-top: 15px;
+  }
+
+  &__item{
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

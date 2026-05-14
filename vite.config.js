@@ -40,6 +40,7 @@ export default defineConfig(() => {
                     publication: 'publications-entry.html',
                     contact: 'contact.html',
                     teams: 'team.html',
+                    team: 'team-entry.html',
                 },
             },
         },
