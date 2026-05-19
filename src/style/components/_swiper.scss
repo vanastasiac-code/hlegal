@@ -83,7 +83,16 @@
   }
 }
 .swiper-pagination-bullet{
-  background: $active-r-color;
+  background: rgba(36, 163, 255, 0.5);
   width: 16px;
   height: 16px;
+  &:hover{
+    background-color: rgba(36, 163, 255, 1);
+  }
+}
+.swiper-pagination-bullet-active{
+  background: rgba(36, 163, 255, 1);
+  &:hover{
+    background-color: rgba(36, 163, 255, 1);
+  }
 }

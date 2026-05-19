@@ -41,6 +41,7 @@ export default defineConfig(() => {
                     contact: 'contact.html',
                     teams: 'team.html',
                     team: 'team-entry.html',
+                    about: 'about_us.html',
                 },
             },
         },
